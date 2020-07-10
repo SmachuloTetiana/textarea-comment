@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font: 15px Arial;
+}
+
+.comment-container {
+  min-width: 300px;
+  margin: 0 auto;
+  align-self: center;
+  border: 1px solid #66cc99;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.comment-form {
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  color: #66cc99;
+  font-style: italic;
+}
+
+#comment-textarea {
+  min-width: 300px;
+  max-width: 600px;
+  border: none;
+  border-radius: 10px;
+  color: #516271;
+  margin: 10px 0;
+}
+
+#comment-textarea::placeholder {
+  color: #a4a4a4;
+}
+
+.btn {
+  height: 40px;
+  line-height: 40px;
+  background: #66cc99;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #559f73;
+}
+
+.btn-toggle {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  font-size: 10px;
+  color: #a4a4a4;
+  background: #fff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #559f73;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.active .btn-toggle {
+  padding: 3px 10px;
+  top: 0;
+  right: 0;
+}
+
+.active #comment-textarea {
+  padding: 10px;
+}
+
+.active .comment-form {
+  flex-flow: inherit;
+}
